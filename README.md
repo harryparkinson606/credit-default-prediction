@@ -16,9 +16,9 @@ I explored this using 30,000 historical credit card records from Taiwan. I start
 
 The forest came out ahead, although the difference wasn't huge. When both models flagged the highest-risk **20% of test customers**, the forest identified **676 actual defaults** compared with **649** for logistic regression, while generating **27 fewer false alarms**.
 
-![ROC-AUC and average precision across the three models](figures/model_comparison.png)
+![Model Comparison](model_comparison.png)
 
-![Defaults caught and false alarms at a fixed review capacity](figures/review_outcomes.png)
+![Review Outcomes](review_outcomes.png)
 
 A separate finding was that stronger L1 regularisation reduced the logistic model from **62 to 36 non-zero encoded coefficients**, with almost no change in cross-validated ROC–AUC. I found the trade-off between simplicity, default detection and false alarms more interesting than any one score.
 
